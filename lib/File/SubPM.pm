@@ -10,8 +10,15 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE);
-$VERSION = '1.1';
-$DATE = '2003/07/04';
+$VERSION = '1.11';
+$DATE = '2003/07/26';
+
+use SelfLoader;
+
+1
+
+__DATA__
+
 
 #####
 # Determine the output generator program modules

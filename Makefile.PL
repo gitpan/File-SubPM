@@ -23,15 +23,11 @@ my $tests = join ' ',unix2os('t/File/SubPM.t');
 WriteMakefile(
     NAME => 'File::SubPM',
     DISTNAME => 'File-SubPM',
-    VERSION  => '0.02',
+    VERSION  => '0.03',
     dist     => {COMPRESS => 'gzip',
                 'gz' => 'gz'},
     test     => {TESTS => $tests},
-    PREREQ_PM => {'File::SmartNL' => '0',
-                  'File::Package' => '0',
-                  'File::TestPath' => '0',
-                  'Text::Scrub' => '0',
-                  'Test::Tech' => '1.08',},
+    
     
 
     ($] >= 5.005 ?     
