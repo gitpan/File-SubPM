@@ -10,25 +10,28 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.03';
-$DATE = '2003/07/26';
+$VERSION = '0.05';
+$DATE = '2004/05/04';
 $FILE = __FILE__;
 
 use vars qw(%INVENTORY);
 %INVENTORY = (
-    'lib/Docs/Site_SVD/File_SubPM.pm' => [qw(0.03 2003/07/26), 'revised 0.02'],
-    'MANIFEST' => [qw(0.03 2003/07/26), 'generated, replaces 0.02'],
-    'Makefile.PL' => [qw(0.03 2003/07/26), 'generated, replaces 0.02'],
-    'README' => [qw(0.03 2003/07/26), 'generated, replaces 0.02'],
-    'lib/File/SubPM.pm' => [qw(1.11 2003/07/26), 'revised 1.1'],
-    't/File/SubPM.d' => [qw(0.02 2003/07/26), 'revised 0.01'],
-    't/File/SubPM.pm' => [qw(0.01 2003/06/07), 'unchanged'],
-    't/File/SubPM.t' => [qw(0.08 2003/07/26), 'revised 0.07'],
-    't/File/Drivers/Driver.pm' => [qw(0.02 2003/07/04), 'unchanged'],
-    't/File/Drivers/Generate.pm' => [qw(0.02 2003/07/04), 'unchanged'],
-    't/File/Drivers/IO.pm' => [qw(0.02 2003/07/04), 'unchanged'],
-    'tlib/File/Package.pm' => [qw(1.1 2003/07/26), 'new'],
-    'tlib/Test/Tech.pm' => [qw(1.1 2003/07/26), 'new'],
+    'lib/Docs/Site_SVD/File_SubPM.pm' => [qw(0.05 2004/05/04), 'revised 0.04'],
+    'MANIFEST' => [qw(0.05 2004/05/04), 'generated, replaces 0.04'],
+    'Makefile.PL' => [qw(0.05 2004/05/04), 'generated, replaces 0.04'],
+    'README' => [qw(0.05 2004/05/04), 'generated, replaces 0.04'],
+    'lib/File/SubPM.pm' => [qw(1.12 2004/05/04), 'unchanged'],
+    't/File/SubPM.d' => [qw(0.03 2004/05/04), 'unchanged'],
+    't/File/SubPM.pm' => [qw(0.02 2004/05/04), 'unchanged'],
+    't/File/SubPM.t' => [qw(0.09 2004/05/04), 'unchanged'],
+    't/File/_Drivers_/Driver.pm' => [qw(0.02 2004/05/04), 'unchanged'],
+    't/File/_Drivers_/Generate.pm' => [qw(0.02 2004/05/04), 'unchanged'],
+    't/File/_Drivers_/IO.pm' => [qw(0.02 2004/05/04), 'unchanged'],
+    't/File/File/Package.pm' => [qw(1.16 2004/05/04), 'unchanged'],
+    't/File/Test/Tech.pm' => [qw(1.22 2004/05/04), 'unchanged'],
+    't/File/Data/Secs2.pm' => [qw(1.19 2004/05/04), 'unchanged'],
+    't/File/Data/SecsPack.pm' => [qw(0.04 2004/05/04), 'unchanged'],
+    't/File/Data/Startup.pm' => [qw(0.04 2004/05/04), 'unchanged'],
 
 );
 
@@ -53,13 +56,13 @@ use vars qw(%INVENTORY);
 
  for
 
-  File::SubPM - Process sub module names found in a sub directory
+  File::SubPM - Obsoleted by C<File::Where> 1.16. Process sub module names found in a sub directory
 
- Revision: B
+ Revision: D
 
- Version: 0.03
+ Version: 0.05
 
- Date: 2003/07/26
+ Date: 2004/05/04
 
  Prepared for: General Public 
 
@@ -95,7 +98,7 @@ of sub module names.
 
 =head2 1.3 Document overview.
 
-This document releases File::SubPM version 0.03
+This document releases File::SubPM version 0.05
 providing a description of the inventory, installation
 instructions and other information necessary to
 utilize and track this release.
@@ -108,12 +111,14 @@ system file specification.
 
 =head2 3.1 Inventory of materials released.
 
-This document releases the file found
-at the following repository(s):
+This document releases the file 
 
-   http://www.softwarediamonds/packages/File-SubPM-0.03
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/File-SubPM-0.03
+ File-SubPM-0.05.tar.gz
 
+found at the following repository(s):
+
+  http://www.softwarediamonds/packages/
+  http://www.perl.com/CPAN/authors/id/S/SO/SOFTDIA/
 
 Restrictions regarding duplication and license provisions
 are as follows:
@@ -180,19 +185,22 @@ consists of the following files:
 
  file                                                         version date       comment
  ------------------------------------------------------------ ------- ---------- ------------------------
- lib/Docs/Site_SVD/File_SubPM.pm                              0.03    2003/07/26 revised 0.02
- MANIFEST                                                     0.03    2003/07/26 generated, replaces 0.02
- Makefile.PL                                                  0.03    2003/07/26 generated, replaces 0.02
- README                                                       0.03    2003/07/26 generated, replaces 0.02
- lib/File/SubPM.pm                                            1.11    2003/07/26 revised 1.1
- t/File/SubPM.d                                               0.02    2003/07/26 revised 0.01
- t/File/SubPM.pm                                              0.01    2003/06/07 unchanged
- t/File/SubPM.t                                               0.08    2003/07/26 revised 0.07
- t/File/Drivers/Driver.pm                                     0.02    2003/07/04 unchanged
- t/File/Drivers/Generate.pm                                   0.02    2003/07/04 unchanged
- t/File/Drivers/IO.pm                                         0.02    2003/07/04 unchanged
- tlib/File/Package.pm                                         1.1     2003/07/26 new
- tlib/Test/Tech.pm                                            1.1     2003/07/26 new
+ lib/Docs/Site_SVD/File_SubPM.pm                              0.05    2004/05/04 revised 0.04
+ MANIFEST                                                     0.05    2004/05/04 generated, replaces 0.04
+ Makefile.PL                                                  0.05    2004/05/04 generated, replaces 0.04
+ README                                                       0.05    2004/05/04 generated, replaces 0.04
+ lib/File/SubPM.pm                                            1.12    2004/05/04 unchanged
+ t/File/SubPM.d                                               0.03    2004/05/04 unchanged
+ t/File/SubPM.pm                                              0.02    2004/05/04 unchanged
+ t/File/SubPM.t                                               0.09    2004/05/04 unchanged
+ t/File/_Drivers_/Driver.pm                                   0.02    2004/05/04 unchanged
+ t/File/_Drivers_/Generate.pm                                 0.02    2004/05/04 unchanged
+ t/File/_Drivers_/IO.pm                                       0.02    2004/05/04 unchanged
+ t/File/File/Package.pm                                       1.16    2004/05/04 unchanged
+ t/File/Test/Tech.pm                                          1.22    2004/05/04 unchanged
+ t/File/Data/Secs2.pm                                         1.19    2004/05/04 unchanged
+ t/File/Data/SecsPack.pm                                      0.04    2004/05/04 unchanged
+ t/File/Data/Startup.pm                                       0.04    2004/05/04 unchanged
 
 
 =head2 3.3 Changes
@@ -287,10 +295,10 @@ t/Test/TestUtil/TestUtil....NOK 18# Test 18 got: '$VAR1 = '\\=head1 Title Page
  for
 
 
-  File::SubPM - Process sub module names found in a sub directory
+  File::SubPM - Obsoleted by C<File::Where> 1.16. Process sub module names found in a sub directory
 
 
- Revision: B
+ Revision: D
 
 [snip]
 
@@ -305,7 +313,7 @@ t/Test/TestUtil/TestUtil....NOK 18# Test 18 got: '$VAR1 = '\\=head1 Title Page
  for
 
 
-  File::SubPM - Process sub module names found in a sub directory
+  File::SubPM - Obsoleted by C<File::Where> 1.16. Process sub module names found in a sub directory
 
 What we have before, was a totally "failure to communicate." aka Cool Hand Luke. 
 VAR1 was empty. Now VAR1 has something. It is not completely dead.
@@ -426,6 +434,24 @@ The test of this module will precede immediately.
 The test support files in the tlib directory will vanish after
 the installtion.
 
+=item File-SubPM-0.03
+
+Added the 'Data-Secs2' to the 'tlib' test library.
+Upgraded to the 'Test-Tech' module that uses the 'Data-Secs2' module.
+
+=item File-SubPM-0.04
+
+The lastest build of Test::STDmaker expects the test library in the same
+directory as the test script.
+Coordiated with the lastest Test::STDmaker by moving the
+test library from tlib to t/File, the same directory as the test script
+and deleting the test library File::TestPath program module.
+
+Obsoleted this package by moving the subroutines to the C<File::Where>
+program module and changing the interface slightly. This program module
+is now gutted and keep it around for a while for to support the transition
+to C<File::Where>
+
 =back
 
 =head2 3.4 Adaptation data.
@@ -450,22 +476,41 @@ and installation support are as follows:
 
 =item Installation Instructions.
 
-To installed the release file, use the CPAN module in the Perl release
+To installed the release file, use the CPAN module
+pr PPM module in the Perl release
 or the INSTALL.PL script at the following web site:
 
  http://packages.SoftwareDiamonds.com
 
 Follow the instructions for the the chosen installation software.
 
-The distribution file is at the following respositories:
+If all else fails, the file may be manually installed.
+Enter one of the following repositories in a web browser:
 
-   http://www.softwarediamonds/packages/File-SubPM-0.03
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/File-SubPM-0.03
+  http://www.softwarediamonds/packages/
+  http://www.perl.com/CPAN/authors/id/S/SO/SOFTDIA/
 
+Right click on 'File-SubPM-0.05.tar.gz' and download to a temporary
+installation directory.
+Enter the following where $make is 'nmake' for microsoft
+windows; otherwise 'make'.
+
+ gunzip File-SubPM-0.05.tar.gz
+ tar -xf File-SubPM-0.05.tar
+ perl Makefile.PL
+ $make test
+ $make install
+
+On Microsoft operating system, nmake, tar, and gunzip 
+must be in the exeuction path. If tar and gunzip are
+not install, download and install unxutils from
+
+ http://packages.softwarediamonds.com
 
 =item Prerequistes.
 
- None.
+  
+ 'File::Where' => '1.16'
 
 
 =item Security, privacy, or safety precautions.
@@ -556,20 +601,7 @@ Plain Old Documentation
 =back
 
 =for html
-<hr>
-<p><br>
-<!-- BLK ID="PROJECT_MANAGEMENT" -->
-<!-- /BLK -->
-<p><br>
-<!-- BLK ID="NOTICE" -->
-<!-- /BLK -->
-<p><br>
-<!-- BLK ID="OPT-IN" -->
-<!-- /BLK -->
-<p><br>
-<!-- BLK ID="LOG_CGI" -->
-<!-- /BLK -->
-<p><br>
+
 
 =cut
 
@@ -580,20 +612,21 @@ __DATA__
 DISTNAME: File-SubPM^
 REPOSITORY_DIR: packages^
 
-VERSION : 0.03^
-FREEZE: 1^
+VERSION : 0.05^
+FREEZE: 0^
 PREVIOUS_DISTNAME:  ^
-PREVIOUS_RELEASE: 0.02^
-REVISION: B^
+PREVIOUS_RELEASE: 0.04^
+REVISION: D^
 
 AUTHOR  : SoftwareDiamonds.com E<lt>support@SoftwareDiamonds.comE<gt>^
 
-ABSTRACT: 
+ABSTRACT:
+This module is obsolete and superceded by the C<File::Where> 1.16 
 Find all the modules in a sub directory and perform other processing
 of sub module names.
 ^
 
-TITLE   :  File::SubPM - Process sub module names found in a sub directory^
+TITLE   :  File::SubPM - Obsoleted by C<File::Where> 1.16. Process sub module names found in a sub directory^
 END_USER: General Public^
 COPYRIGHT: copyright © 2003 Software Diamonds^
 CLASSIFICATION: NONE^
@@ -603,7 +636,7 @@ SVD_FSPEC: Unix^
 
 REPOSITORY: 
   http://www.softwarediamonds/packages/
-  http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/
+  http://www.perl.com/CPAN/authors/id/S/SO/SOFTDIA/
 ^
 
 COMPRESS: gzip^
@@ -615,16 +648,22 @@ CHANGE2CURRENT:  ^
 AUTO_REVISE: 
 lib/File/SubPM.pm
 t/File/SubPM.*
-t/File/Drivers/*
-lib/File/Package.pm => tlib/File/Package.pm
-lib/Test/Tech.pm => tlib/Test/Tech.pm
+t/File/_Drivers_/*
+lib/File/Package.pm => t/File/File/Package.pm
+lib/Test/Tech.pm => t/File/Test/Tech.pm
+lib/Data/Secs2.pm => t/File/Data/Secs2.pm
+lib/Data/SecsPack.pm => t/File/Data/SecsPack.pm
+lib/Data/Startup.pm => t/File/Data/Startup.pm
 ^
 
-PREREQ_PM:  ^
+PREREQ_PM:  
+'File::Where' => '1.16'
+^
 
+README_PODS: lib/File/SubPM.pm^
 TESTS: t/File/SubPM.t^
-
 EXE_FILES:  ^
+
 CHANGES:
 Changes are as follows: 
 
@@ -855,6 +894,24 @@ The test of this module will precede immediately.
 The test support files in the tlib directory will vanish after
 the installtion.
 
+\=item File-SubPM-0.03
+
+Added the 'Data-Secs2' to the 'tlib' test library.
+Upgraded to the 'Test-Tech' module that uses the 'Data-Secs2' module.
+
+\=item File-SubPM-0.04
+
+The lastest build of Test::STDmaker expects the test library in the same
+directory as the test script.
+Coordiated with the lastest Test::STDmaker by moving the
+test library from tlib to t/File, the same directory as the test script
+and deleting the test library File::TestPath program module.
+
+Obsoleted this package by moving the subroutines to the C<File::Where>
+program module and changing the interface slightly. This program module
+is now gutted and keep it around for a while for to support the transition
+to C<File::Where>
+
 \=back
 
 ^
@@ -957,16 +1014,38 @@ ANY WAY OUT OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 INSTALLATION:
-To installed the release file, use the CPAN module in the Perl release
+To installed the release file, use the CPAN module
+pr PPM module in the Perl release
 or the INSTALL.PL script at the following web site:
 
  http://packages.SoftwareDiamonds.com
 
 Follow the instructions for the the chosen installation software.
 
-The distribution file is at the following respositories:
+If all else fails, the file may be manually installed.
+Enter one of the following repositories in a web browser:
 
 ${REPOSITORY}
+
+Right click on '${DIST_FILE}' and download to a temporary
+installation directory.
+Enter the following where $make is 'nmake' for microsoft
+windows; otherwise 'make'.
+
+ gunzip ${BASE_DIST_FILE}.tar.${COMPRESS_SUFFIX}
+ tar -xf ${BASE_DIST_FILE}.tar
+ perl Makefile.PL
+ $make test
+ $make install
+
+On Microsoft operating system, nmake, tar, and gunzip 
+must be in the exeuction path. If tar and gunzip are
+not install, download and install unxutils from
+
+ http://packages.softwarediamonds.com
+^
+
+SUPPORT: 603 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>
 ^
 
 SUPPORT: 603 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>^
@@ -1007,21 +1086,7 @@ SEE_ALSO:
 ^
 
 
-HTML:
-<hr>
-<p><br>
-<!-- BLK ID="PROJECT_MANAGEMENT" -->
-<!-- /BLK -->
-<p><br>
-<!-- BLK ID="NOTICE" -->
-<!-- /BLK -->
-<p><br>
-<!-- BLK ID="OPT-IN" -->
-<!-- /BLK -->
-<p><br>
-<!-- BLK ID="LOG_CGI" -->
-<!-- /BLK -->
-<p><br>
+HTML: 
 ^
 ~-~
 

@@ -6,8 +6,11 @@ lib/File/SubPM.pm
 t/File/SubPM.d
 t/File/SubPM.pm
 t/File/SubPM.t
-t/File/Drivers/Driver.pm
-t/File/Drivers/Generate.pm
-t/File/Drivers/IO.pm
-tlib/File/Package.pm
-tlib/Test/Tech.pm
+t/File/_Drivers_/Driver.pm
+t/File/_Drivers_/Generate.pm
+t/File/_Drivers_/IO.pm
+t/File/File/Package.pm
+t/File/Test/Tech.pm
+t/File/Data/Secs2.pm
+t/File/Data/SecsPack.pm
+t/File/Data/Startup.pm

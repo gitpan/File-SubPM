@@ -23,16 +23,18 @@ my $tests = join ' ',unix2os('t/File/SubPM.t');
 WriteMakefile(
     NAME => 'File::SubPM',
     DISTNAME => 'File-SubPM',
-    VERSION  => '0.03',
+    VERSION  => '0.05',
     dist     => {COMPRESS => 'gzip',
                 'gz' => 'gz'},
     test     => {TESTS => $tests},
-    
+    PREREQ_PM => { 
+                  'File::Where' => '1.16'},
     
 
     ($] >= 5.005 ?     
         (AUTHOR    => 'SoftwareDiamonds.com E<lt>support@SoftwareDiamonds.comE<gt>',
-        ABSTRACT  => 'Find all the modules in a sub directory and perform other processing
+        ABSTRACT  => 'This module is obsolete and superceded by the C<File::Where> 1.16 
+Find all the modules in a sub directory and perform other processing
 of sub module names.', ) : ()),
 );
 
